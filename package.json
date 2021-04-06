@@ -1,0 +1,27 @@
+{
+  "name": "playwright-ui-api-tests",
+  "version": "1.0.0",
+  "description": " Playwright ui, api tests",
+  "main": "index.js",
+  "scripts": {
+    "folio": "npx folio ./src/folio.js -p headful=true --retries=0 -p browserName=chromium -p slowMo=20",
+    "mocha": "node ./node_modules/mocha/bin/mocha ./src/trace.js --timeout=0",
+    "run": "node ./src/run.mjs"
+  },
+  "keywords": [
+    "javascript",
+    "playwright",
+    "folio",
+    "mocha",
+    "typescript"
+  ],
+  "author": "Vladislav Shmakov",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^0.1100.0",
+    "playwright": "^1.10.0"
+  },
+  "dependencies": {
+    "mocha": "^8.3.2"
+  }
+}
