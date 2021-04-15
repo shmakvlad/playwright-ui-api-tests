@@ -5,8 +5,9 @@ const heading4 = document.querySelector('.h2-class')
 const heading5 = document.querySelector('#sub-hello') // Всегда 1 элемент
 const heading6 = document.querySelector('h2')
 
+console.log(heading)
+console.dir(heading2)
 
-// const heading3 = heading2.nextElementSibling
 const h2List = document.querySelectorAll('h2')
 const heading7 = h2List[h2List.length - 1]
 

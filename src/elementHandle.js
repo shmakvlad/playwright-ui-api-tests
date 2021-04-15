@@ -15,6 +15,13 @@ const { expect } = require("chai");
     await page.fill('input[name="password"]', "vlad12-8");
     await page.check('input[name="sign"]');
 
+    // $
+    const emailHandle = await page.$('.panel-body');
+    const prop = await emailHandle.getProperties()
+
+    // $eval
+    expect(await page.$eval('input[name="email"]', node => node.value)).eq('ivan@gmail.com')
+
     await page.click("text=Sign in");
 
     await page.close();

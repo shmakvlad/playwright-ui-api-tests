@@ -82,7 +82,27 @@ console.log(allBudget)
 // forEach
 people.forEach(x => console.log(x))
 
-// Задача 1
+// Ex 1
 const text = 'Привет, мы изучаем JavaScript'
 const reverseText = text.split('').reverse().join('')
 console.log(reverseText)
+
+// Ex 2
+const arr = [1, 2, 5, 7, 12]
+arr.forEach(x => console.log(x * 2))
+console.log(arr.map(x => (x * 3).toString()))
+
+// Ex 3
+const arr = [1, 2, 5, 7, 12]
+
+Array.prototype.multBy = function(n){
+  return this.map(function(i){
+    return i * n 
+  })  
+}
+console.log(arr.multBy(3))
+
+Array.prototype.multByFn = function(number) { 
+  return this.map(x => x * number)
+}
+console.log(arr.multByFn(10))
