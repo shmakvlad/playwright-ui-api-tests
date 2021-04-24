@@ -28,6 +28,12 @@ son.greet = function(){
     console.log('My name is', son.name)
 }
 
+for (let key in son) {
+    if (son.hasOwnProperty(key)) {
+        console.log('Key: ', key, ' ', 'Value: ', son[key])
+    }
+}
+
 // String
 const str = 'Integer'
 const strobj = new String('Double')
