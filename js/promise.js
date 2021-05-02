@@ -5,27 +5,35 @@ const p = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log('Up...');
         const obj = {
-            length: '20px',
+            length: '25px',
             width: '40px'
         }
         resolve(obj)
-    }, 2000)
+    }, 1000)
 })
 
 p.then(data => {
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            data.size = 25
-            resolve(data)
-        }, 3000)
+        if (data.length  === '20px') {
+            setTimeout(() => {
+                data.size = 25
+                resolve(data)
+            }, 3000)
+        } else {
+            reject(data)
+        }
     })
-}).then(data => {
-    data.name = 'css'
-    return data
+}).then((onfulfilled, onrejected) => {
+    if(onfulfilled){
+        onfulfilled.name = 'css'
+        return onfulfilled
+    } else {
+        return onrejected
+    }
 }).then(data => {
     console.log('Object: ', data);
 }).catch(err => {
-    console.log(err)
+    console.log('Error: ', err)
 }).finally(() => console.log('Down...'))
 
 console.log('Stop processing...');

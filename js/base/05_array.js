@@ -72,7 +72,7 @@ console.log(filteredNumbers)
 // reduce
 const allBudget = people
   .filter(person => person.budget > 2000)
-  .reduce((acc, person) => {
+  .reduce((acc, person) => {                  // .reduce((acc, person) => acc + person.budget, 0)
     acc += person.budget
     return acc
   }, 0)
