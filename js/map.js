@@ -20,8 +20,8 @@ const maps = new Map()
 const map = new Map(personEntrie)
 const ent = new Map(Object.entries(son))
 
-// console.log(map)
-// console.log(map.get('age'))
+console.log(map)
+console.log(map.get('age'))
 
 map
   .set(son, 'My relative')
@@ -29,6 +29,7 @@ map
   .set(NaN, 'Not a Number')
   .set(2, 'two')
 
+// console.log(map)
 // console.log(map.size)
 // console.log(map.delete(son))
 // console.log(map.has(2))
@@ -37,6 +38,8 @@ map
 // 1 
 for (let iterator of map.entries()) {
     console.log(iterator)
+    console.log(iterator[0])
+    console.log(iterator[1])
 }
 
 // 2

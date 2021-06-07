@@ -31,4 +31,5 @@ dis.subscribe('aa', data => {
   console.log('ON: aa', data)
 })
 
+dis.emit('aa', {ola: 123})
 dis.dispatch('aa', {aa: 22})

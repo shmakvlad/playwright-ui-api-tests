@@ -29,9 +29,9 @@ const {
 name: firstName = 'Без имени',
 age,
 car = 'Машины нет',
-address: {city: homeTown, country}
+address: {city: homeTown, country, phone = '8014356122'}
 } = person
-console.log(firstName, age, car, homeTown, country)
+console.log(firstName, age, car, homeTown, country, phone)
 
 const {name: title, ...info} = person
 console.log(title, info)  

@@ -34,6 +34,18 @@ class Cat extends Animal{
     set setAge(value){
         this.age = value
     }
+
+    getAnimalAge(){
+        return this.age
+    }
+
+    async getName(){
+        return await this.name
+    }
+
+    static async getHasTail(){
+        return await this.hasTail
+    }
 }
 
 const cat = new Cat({

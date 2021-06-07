@@ -27,6 +27,8 @@ console.log(citiesInEuropeWithPopulation)
 const cities = { ...citiesInEuropeWithPopulation }
 console.log('Cities: ', cities)
 console.log({...citiesInEuropeWithPopulation, ...citiesInRussiaWithPopulation})
+const info = {...citiesInEuropeWithPopulation, ...citiesInRussiaWithPopulation, phone: '80800998801', Paris: 42}
+console.log(info)
 
 
 // Practice
