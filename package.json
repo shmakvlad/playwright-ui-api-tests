@@ -6,7 +6,8 @@
   "scripts": {
     "folio": "npx folio ./src/folio.js -p headful=true --retries=0 -p browserName=chromium -p slowMo=20",
     "mocha": "node ./node_modules/mocha/bin/mocha ./src/trace.js --timeout=0",
-    "run": "node ./src/run.mjs"
+    "run": "node ./src/run.js",
+    "app": "node ./js/ecmascript/app.js"
   },
   "keywords": [
     "javascript",
@@ -18,8 +19,12 @@
   "author": "Vladislav Shmakov",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.7",
     "@playwright/test": "^0.1100.0",
-    "playwright": "^1.10.0"
+    "playwright": "^1.11.1"
   },
   "dependencies": {
     "chai": "^4.3.4",
